@@ -1,6 +1,6 @@
 {
   "name": "lucide-taro",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "type": "module",
   "description": "Lucide icons for Taro.",
   "main": "dist/index.cjs.js",
@@ -26,5 +26,16 @@
     "rollup": "^3.x",
     "rollup-plugin-typescript2": "^0.34.1",
     "typescript": "^5.x"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    },
+    "./weapp": "./dist/weapp.js",
+    "./vite": {
+      "import": "./dist/lucide-taro-hmr.js",
+      "require": "./dist/lucide-taro-hmr.cjs"
+    }
   }
 }
