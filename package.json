@@ -1,0 +1,30 @@
+{
+  "name": "lucide-taro",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Lucide icons for Taro.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "generate:icons": "node scripts/generate-lucide-icons.js",
+    "build": "npm run generate:icons && rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@tarojs/components": ">=3",
+    "react": ">=17"
+  },
+  "devDependencies": {
+    "tslib": "^2.6.2",
+    "@types/react": "^19.1.8",
+    "lucide-react": "^0.525.0",
+    "rollup": "^3.x",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "^5.x"
+  }
+}
